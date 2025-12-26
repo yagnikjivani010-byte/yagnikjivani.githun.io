@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="image"></div>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="my_skills.html">My Skills</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <p>Let’s build something great 🚀</p>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="name-group">
+                    <div>
+                        <input type="text" id="firstName" placeholder="First Name">
+                        <small class="error"></small>
+                    </div>
+                    <div>
+                        <input type="text" id="lastName" placeholder="Last Name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="email" id="email" placeholder="Your Email">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <textarea id="description" placeholder="Describe your message"></textarea>
+                    <small class="error"></small>
+                </div>
+
+                <button type="submit">
+                    <span class="btn-text">Send Message</span>
+                    <span class="loader"></span>
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; Yagnik's Portfolio | All Rights Reserved</p>
+    </footer>
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h2>✅ Message Sent!</h2>
+            <p>Thanks for contacting me. I’ll reply soon.</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
